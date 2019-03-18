@@ -44,7 +44,7 @@ Vue.Component('watch-resize', WatchResize);
 
 | Name | Event Type | Description |
 | --- | --- | --- |
-| `resize` | `UIEvent` | Fires each time the component child nodes change size. |
+| `resize` | `UIEvent` | Fires each time the component's child nodes change size. |
 
 ### Vue template example
 
