@@ -1,0 +1,50 @@
+{
+  "name": "vue-watch-resize",
+  "version": "0.1.0",
+  "description": "A Vue component that watches for size changes on its child nodes and emits an event.",
+  "author": "Ian K Smith <smithki707@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smithki/vue-adaptable-div.git"
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
+  "main": "dist/VueWatchResize.common.js",
+  "typings": "src/index.d.ts",
+  "unpkg": "dist/VueWatchResize.umd.js",
+  "scripts": {
+    "build": "npm-run-all -s clean:* build:*",
+    "build:types": "vuetype src",
+    "build:bundle": "vue-cli-service build --target lib --name VueWatchResize src/index.ts",
+    "clean": "npm-run-all -p clean:*",
+    "clean:dist": "rimraf dist",
+    "clean:types": "rimraf src/*.vue.d.ts",
+    "lint": "vue-cli-service lint",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.9"
+  },
+  "devDependencies": {
+    "@ikscodes/tslint-config": "^5.3.1",
+    "@vue/cli-plugin-typescript": "^3.4.1",
+    "@vue/cli-service": "^3.5.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.14.0",
+    "rimraf": "^2.6.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.3",
+    "vue": "^2.6.9",
+    "vue-template-compiler": "^2.6.9",
+    "vuetype": "^0.3.2"
+  },
+  "dependencies": {
+    "watch-resize": "^1.3.1"
+  }
+}
