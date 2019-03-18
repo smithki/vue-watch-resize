@@ -7,7 +7,7 @@
 
 ## 💁🏼‍♂️ Introduction
 
-`WatchResize` is a Vue component that wraps child nodes in a `<div>` and watches them for size changes. It uses [`watch-resize`]() and [RxJS]() observables to achieve this.
+`WatchResize` is a Vue component that wraps child nodes in a `<div>` and watches them for size changes. It uses [`watch-resize`](https://github.com/smithki/watch-resize) and [RxJS](https://github.com/ReactiveX/rxjs) observables under the hood to achieve this.
 
 ## 🔗 Installation
 
@@ -37,7 +37,7 @@ In UMD (using `WatchResize` via a `<script>` tag):
 
 ```js
 const WatchResize = VueWatchResize.WatchResize;
-Vue.Component('adaptable-div', WatchResize);
+Vue.Component('watch-resize', WatchResize);
 ```
 
 ### Events
@@ -45,3 +45,11 @@ Vue.Component('adaptable-div', WatchResize);
 | Name | Event Type | Description |
 | --- | --- | --- |
 | `resize` | `UIEvent` | Fires each time the component child nodes change size. |
+
+### Vue template example
+
+```html
+<watch-resize @resize="myHandleResizeMethod($event)">
+  <!-- Child nodes that change size go here -->
+</watch-resize>
+```
